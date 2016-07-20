@@ -8,6 +8,10 @@ An interactive transparency background effect that makes images visible when spe
 
 ![Featured Image Interactive Points](http://tympanus.net/codrops/wp-content/uploads/2016/07/InteractivePoints_800x600.jpg)
 
+## Sponsor
+
+This demo is sponsored by [Acuity Scheduling](https://goo.gl/VqOfus).
+
 ## License
 
 Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is". 
