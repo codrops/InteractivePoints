@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Interactive Points | Codrops</title>
+		<meta name="description" content="A hover/click opaqueness background effect that makes images visible when specific points are hovered, showing some content once clicked." />
+		<meta name="keywords" content="opacity, background, hover, transparency, effect, css, html, javascript, template, point of interest, map" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<svg class="hidden">
+			<defs>
+				<symbol id="icon-arrow" viewBox="0 0 32 32">
+					<title>arrow</title>
+					<path d="M7.333 24c-0.133 0-0.4 0-0.533-0.133l-6.667-6.667c0 0-0.133-0.133-0.133-0.267s0-0.133 0-0.267c0 0 0 0 0 0 0-0.133 0-0.133 0-0.267s0.133-0.133 0.133-0.267l6.667-6.667c0.4-0.133 0.8-0.133 1.067 0s0.267 0.667 0 0.933l-5.6 5.6h29.067c0.4 0 0.667 0.267 0.667 0.667s-0.267 0.667-0.667 0.667h-29.067l5.467 5.467c0.267 0.267 0.267 0.667 0 0.933 0 0.267-0.267 0.267-0.4 0.267z"></path>
+				</symbol>
+				<symbol id="icon-drop" viewBox="0 0 32 32">
+					<title>drop</title>
+					<path d="M16,31.1c-5.5,0-10-4.5-10-10c0-5.3,9.2-19.2,9.5-19.8c0.3-0.4,0.8-0.4,1,0C16.9,1.8,26,15.8,26,21	C26,26.6,21.5,31.1,16,31.1L16,31.1z M16,2.7C14,5.8,7.2,16.8,7.2,21c0,4.9,3.9,8.8,8.8,8.8s8.8-3.9,8.8-8.8C24.8,16.8,18,5.8,16,2.7z"/><path d="M12.9,25.9c-0.1,0-0.3,0-0.4-0.1c-1.4-1.3-2.1-3-2.1-4.8c0-1.5,1.1-4.3,3.3-8.4c0.1-0.4,0.5-0.5,0.9-0.3c0.3,0.1,0.4,0.5,0.3,0.9c-2,3.8-3.1,6.5-3.1,7.8c0,1.4,0.6,2.8,1.6,3.8c0.3,0.3,0.3,0.6,0,0.9C13.2,25.8,13,25.9,12.9,25.9z"/>
+				</symbol>
+				<symbol id="icon-github" viewBox="0 0 32 32">
+					<title>github logo</title>
+					<path d="M16,2C8.1,2,1.7,8.4,1.7,16.4c0,6.3,4.1,11.7,9.8,13.6c0.7,0.1,1-0.3,1-0.7c0-0.3,0-1.2,0-2.4c-4,0.9-4.8-1.9-4.8-1.9C7,23.2,6,22.8,6,22.8c-1.3-0.9,0.1-0.9,0.1-0.9c1.4,0.1,2.2,1.5,2.2,1.5c1.3,2.2,3.4,1.6,4.2,1.2c0.1-0.9,0.5-1.6,0.9-1.9c-3.2-0.4-6.5-1.6-6.5-7.1c0-1.6,0.6-2.8,1.5-3.8C8.2,11.4,7.7,9.9,8.5,8c0,0,1.2-0.4,3.9,1.5C13.6,9.1,14.8,9,16,9c1.2,0,2.4,0.2,3.6,0.5C22.3,7.6,23.5,8,23.5,8c0.8,2,0.3,3.4,0.1,3.8c0.9,1,1.5,2.3,1.5,3.8c0,5.5-3.3,6.7-6.5,7.1c0.5,0.4,1,1.3,1,2.7c0,1.9,0,3.5,0,3.9c0,0.4,0.3,0.8,1,0.7c5.7-1.9,9.8-7.3,9.8-13.6C30.3,8.4,23.9,2,16,2z"/>
+				</symbol>
+			</defs>
+		</svg>
+		<main>
+			<header class="codrops-header">
+				<div class="codrops-links">
+					<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/ItemRevealer/" title="Previous Demo"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
+					<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=27459" title="Back to the article"><svg class="icon icon--drop"><use xlink:href="#icon-drop"></use></svg></a>
+				</div>
+				<h1 class="codrops-header__title">Interactive Points</h1>
+				<p class="codrops-header__tagline">Hover/click opaqueness background effect</p>
+				<a class="icon-link" href="https://github.com/codrops/InteractivePoints/" title="Find this project on GitHub"><svg class="icon icon--github"><use xlink:href="#icon-github"></use></svg><span class="icon-text">View on GitHub</span></a></a>
+			</header>
+			<p class="message">Please view this demo on a larger screen.</p>
+			<section class="interactive-points" id="interactive-1" tabindex="0">
+				<img class="static" src="img/map.png" alt="Map of London" />
+				<div class="backgrounds">
+					<div class="background__element" style="background-image: url(img/1.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/2.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/3.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/4.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/5.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/6.jpg)"></div>
+				</div>
+				<svg class="points" viewBox="0 0 1885 1080" width="100%" height="100%">
+					<path class="point" d="M409.2,195.4L409.2,195.4c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C416.3,213.8,415.6,201.8,409.2,195.4z"/>
+					<path class="point" d="M1069.3,589.7L1069.3,589.7c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C1076.4,608.2,1075.7,596.1,1069.3,589.7z"/>
+					<path class="point" d="M1533.8,114.2L1533.8,114.2c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C1541,132.6,1540.2,120.6,1533.8,114.2z"/>
+					<path class="point" d="M878.9,247.4L878.9,247.4c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C886,265.8,885.3,253.8,878.9,247.4z"/>
+					<path class="point" d="M615.2,658.3L615.2,658.3c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C622.3,676.8,621.6,664.7,615.2,658.3z"/>
+					<path class="point" d="M183.5,524L183.5,524c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C190.6,542.5,189.9,530.4,183.5,524z"/>
+				</svg>
+				<div class="points-tooltips">
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Rupert Street</h2><br><p class="point-tooltip__description">The connection to London Bridge that no one knew about</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Swiss Court</h2><br><p class="point-tooltip__description">The crazy story of a rebel</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Bear Street</h2><br><p class="point-tooltip__description">Hidden gems and stories</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Leicester Square</h2><br><p class="point-tooltip__description">A never ending love story</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Oxendon Street</h2><br><p class="point-tooltip__description">No need to panik, rescue is close</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Haymarket</h2><br><p class="point-tooltip__description">Adventures to be discovered</p></div>
+				</div>
+				<div class="points-content">
+					<div class="point-content">
+						<h3 class="point-content__title">The Rupert Connection</h3>
+						<p class="point-content__subtitle">24<sup>th</sup> of February, 1927</p>
+						<p class="point-content__text">Descended from astronomers encyclopaedia galactica from which we spring worldlets intelligent beings gathered by gravity billions.</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Swiss Court, Miss</h3>
+						<p class="point-content__subtitle">3<sup>rd</sup> of March, 1928</p>
+						<p class="point-content__text">Hydrogen atoms circumnavigated Cambrian explosion, a mote of dust suspended in a sunbeam Hypatia.</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Hiding in Bear Street</h3>
+						<p class="point-content__subtitle">19<sup>th</sup> of July, 1927</p>
+						<p class="point-content__text">From which we spring the ash of stellar alchemy from which we spring emerged into consciousness, great turbulent clouds rich in heavy atoms. </p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Leicester Square Love</h3>
+						<p class="point-content__subtitle">12<sup>th</sup> of August, 1930</p>
+						<p class="point-content__text">A mote of dust suspended in a sunbeam are creatures of the cosmos decipherment, Orion's sword corpus callosum galaxies shores of the cosmic ocean.</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Oxendon of Oxes</h3>
+						<p class="point-content__subtitle">26<sup>th</sup> of March, 1927</p>
+						<p class="point-content__text">Extraplanetary concept of the number one vanquish the impossible culture trillion the sky calls to us.</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Haymarket Forever</h3>
+						<p class="point-content__subtitle">14<sup>th</sup> of January, 1927</p>
+						<p class="point-content__text">Birth, are creatures of the cosmos Cambrian explosion colonies great turbulent clouds cosmos are creatures of the cosmos! Great turbulent clouds.</p>
+					</div>
+				</div>
+				<a class="pater" href="https://goo.gl/VqOfus" rel="nofollow">
+					<img class="pater__img" src="img/sponsor/AcuityScheduling_logo.svg" alt="Acuity Scheduling Logo"/>
+					<h3 class="pater__title">Developer Friendly Appointment Scheduling</h3>
+					<p class="pater__description">Get your clients off their phones with online appointment scheduling from Acuity Scheduling and just 2 lines of code. <strong>Get started for free!</strong></p>
+				</a>
+			</section>
+			<a class="pater pater--responsive" href="https://goo.gl/VqOfus" rel="nofollow">
+				<img class="pater__img" src="img/sponsor/AcuityScheduling_logo.svg" alt="Acuity Scheduling Logo"/>
+				<h3 class="pater__title">Developer Friendly Appointment Scheduling</h3>
+				<p class="pater__description">Get your clients off their phones with online appointment scheduling from Acuity Scheduling and just 2 lines of code. <strong>Get started for free!</strong></p>
+			</a>
+			<section class="content">
+				<div class="content__inner">
+					<h2 class="content__title">Seeing the Past in a New Light</h2> 
+					<h3 class="content__subtitle">Life can only be understood backwards;<br/> but it must be lived forwards.</h3>
+					<p>Extraordinary claims require extraordinary evidence billions upon billions, great turbulent clouds preserve and cherish that pale blue dot not a sunrise but a galaxyrise! The only home we've ever known as a patch of light. Courage of our questions ship of the imagination the only home we've ever known take root and flourish, billions upon billions, cosmos. Not a sunrise but a galaxyrise ship of the imagination birth vastness is bearable only through love at the edge of forever, not a sunrise but a galaxyrise, from which we spring! Not a sunrise but a galaxyrise Euclid with pretty stories for which there's little good evidence, the only home we've ever known a very small stage in a vast cosmic arena birth, the ash of stellar alchemy.</p>
+					<p class="margin-paragraph"><strong>The following example shows some different configuration options:</strong></p>
+				</div>
+			</section>
+			<section class="interactive-points interactive-points--alter" id="interactive-2" tabindex="0">
+				<img class="static" src="img/map.png" alt="Map of London" />
+				<div class="backgrounds">
+					<div class="background__element" style="background-image: url(img/1.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/2.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/3.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/4.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/5.jpg)"></div>
+					<div class="background__element" style="background-image: url(img/6.jpg)"></div>
+				</div>
+				<svg class="points" viewBox="0 0 1885 1080" width="100%" height="100%">
+					<path class="point" d="M409.2,195.4L409.2,195.4c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C416.3,213.8,415.6,201.8,409.2,195.4z"/>
+					<path class="point" d="M1069.3,589.7L1069.3,589.7c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C1076.4,608.2,1075.7,596.1,1069.3,589.7z"/>
+					<path class="point" d="M1533.8,114.2L1533.8,114.2c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C1541,132.6,1540.2,120.6,1533.8,114.2z"/>
+					<path class="point" d="M878.9,247.4L878.9,247.4c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C886,265.8,885.3,253.8,878.9,247.4z"/>
+					<path class="point" d="M615.2,658.3L615.2,658.3c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C622.3,676.8,621.6,664.7,615.2,658.3z"/>
+					<path class="point" d="M183.5,524L183.5,524c-7.1-7.1-18.6-7.1-25.7,0l0,0c-6.4,6.4-7.1,18.4-1.7,25.7l14.5,21l14.5-21C190.6,542.5,189.9,530.4,183.5,524z"/>
+				</svg>
+				<div class="points-tooltips">
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Rupert Street</h2><br><p class="point-tooltip__description">The connection to London Bridge that no one knew about</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Swiss Court</h2><br><p class="point-tooltip__description">The crazy story of a rebel</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Bear Street</h2><br><p class="point-tooltip__description">Hidden gems and stories</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Leicester Square</h2><br><p class="point-tooltip__description">A never ending love story</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Oxendon Street</h2><br><p class="point-tooltip__description">No need to panik, rescue is close</p></div>
+					<div class="point-tooltip"><h2 class="point-tooltip__title">Haymarket</h2><br><p class="point-tooltip__description">Adventures to be discovered</p></div>
+				</div>
+				<div class="points-content">
+					<div class="point-content">
+						<h3 class="point-content__title">The Rupert Connection</h3>
+						<p class="point-content__subtitle">24<sup>th</sup> of February, 1927</p>
+						<p class="point-content__text">Descended from astronomers encyclopaedia galactica from which we spring worldlets intelligent beings gathered by gravity billions.</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Swiss Court, Miss</h3>
+						<p class="point-content__subtitle">3<sup>rd</sup> of March, 1928</p>
+						<p class="point-content__text">Hydrogen atoms circumnavigated Cambrian explosion, a mote of dust suspended in a sunbeam Hypatia.</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Hiding in Bear Street</h3>
+						<p class="point-content__subtitle">19<sup>th</sup> of July, 1927</p>
+						<p class="point-content__text">From which we spring the ash of stellar alchemy from which we spring emerged into consciousness, great turbulent clouds rich in heavy atoms. </p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Leicester Square Love</h3>
+						<p class="point-content__subtitle">12<sup>th</sup> of August, 1930</p>
+						<p class="point-content__text">A mote of dust suspended in a sunbeam are creatures of the cosmos decipherment, Orion's sword corpus callosum galaxies shores of the cosmic ocean.</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Oxendon of Oxes</h3>
+						<p class="point-content__subtitle">26<sup>th</sup> of March, 1927</p>
+						<p class="point-content__text">Extraplanetary concept of the number one vanquish the impossible culture trillion the sky calls to us.</p>
+					</div>
+					<div class="point-content">
+						<h3 class="point-content__title">Haymarket Forever</h3>
+						<p class="point-content__subtitle">14<sup>th</sup> of January, 1927</p>
+						<p class="point-content__text">Birth, are creatures of the cosmos Cambrian explosion colonies great turbulent clouds cosmos are creatures of the cosmos! Great turbulent clouds.</p>
+					</div>
+				</div>
+			</section>
+			<!-- Related demos -->
+			<section class="content content--related">
+				<p><strong>Images by the <a href="https://www.flickr.com/photos/stockholmtransportmuseum_commons/albums/72157627860632062">Stockholm Transport Museum</a></strong></p>
+					<p>Filler text from <a href="http://saganipsum.com/">Sagan Ipsum</a></p>
+				<p>If you enjoyed this demo you might also like:</p>
+				<a class="media-item" href="http://tympanus.net/Development/TooltipStylesInspiration/">
+					<img class="media-item__img" src="img/related/TooltipStylesInspiration.png">
+					<h3 class="media-item__title">Tooltip Styles Inspiration</h3>
+				</a>
+				<a class="media-item" href="http://tympanus.net/Development/ImageTiltEffect/">
+					<img class="media-item__img" src="img/related/ImageTiltEffect.jpg">
+					<h3 class="media-item__title">Image Tilt Effect</h3>
+				</a>
+			</section>
+		</main>
+		<script src="js/lunar.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+		(function() {
+			new PointsMap(document.querySelector('#interactive-1'));
+			new PointsMap(document.querySelector('#interactive-2'), {
+				// Maximum opacity that the background element of a Point can have when the point is active (mouse gets closer to it).
+				maxOpacityOnActive : 1,
+				// When the mouse is [activeOn]px away from one point, its image gets opacity = point.options.maxOpacity.
+				activeOn : 90
+			});
+		})();
+		</script>
+	</body>
+</html>

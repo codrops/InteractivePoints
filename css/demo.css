@@ -1,0 +1,350 @@
+*, *::after, *::before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #fff;
+	background: #34343d;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+}
+
+a {
+	outline: none;
+	color: #60B8B9;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #fff;
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+.message {
+	font-weight: bold;
+	color: #914a58;
+	background: #f0d4d8;
+	font-size: 0.85em;
+	margin: 0;
+	padding: 1em;
+	display: none;
+}
+
+/* Icons */
+.icon-link {
+	padding: 0 0.5em;
+	margin: 0 0 0 auto;
+	font-size: 0.85em;
+	white-space: nowrap;
+}
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	fill: currentColor;
+}
+
+.icon-text {
+	line-height: 1;
+	vertical-align: middle;
+	padding: 0.35em;
+	font-weight: bold;
+	display: inline-block;
+}
+
+main {
+	max-width: 1885px;
+	display: inline-block;
+	margin: 0 auto;
+	position: relative;
+	text-align: left;
+}
+
+/* Header */
+.codrops-header {
+	position: relative;
+	padding: 1em;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	align-items: center;
+	z-index: 10;
+	background: #28282f;
+}
+
+.codrops-header__title {
+	margin: 0;
+	letter-spacing: -1px;
+	font-size: 1.65em;
+	white-space: nowrap;
+	line-height: 1;
+	font-family: 'Source Serif Pro', serif;
+}
+
+.codrops-header__tagline {
+	margin: 0 0 0 1.5em;
+	color: #495050;
+	font-weight: bold;
+}
+
+/* Top Navigation Style */
+.codrops-links {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	font-size: 0.8em;
+	margin: 0 1em 0 0;
+}
+
+.codrops-links::after {
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	width: 1px;
+	height: 70%;
+	background: currentColor;
+	opacity: 0.2;
+	content: '';
+	-webkit-transform: rotate3d(0,0,1,22.5deg);
+	transform: rotate3d(0,0,1,22.5deg);
+}
+
+.codrops-icon {
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0.5em;
+}
+
+/* Demo links */
+.codrops-demos {
+	margin: 0 0 0 auto;
+	text-align: right;
+}
+
+.codrops-demos a {
+	display: inline-block;
+	margin: 0 0.5em;
+	font-weight: bold;
+}
+
+.codrops-demos a.current-demo {
+	color: #28282f;
+}
+
+/* Content */
+.content {
+	background: #28282f;
+}
+
+.content__inner {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 8em 10% 4em;
+}
+
+.content__title,
+.content__subtitle {
+	font-family: 'Source Serif Pro', serif;
+}
+
+.content__title {
+	font-size: 3em;
+	margin: 0;
+}
+
+.content__subtitle {
+	font-size: 2em;
+	font-weight: normal;
+	margin: 0.25em 0 0;
+	color: #9f9da7;
+}
+
+.content p {
+	font-size: 1.175em;
+	line-height: 1.6;
+	margin: 1.5em 0;
+}
+
+p.margin-paragraph {
+	margin: 8em 0 1.5em;
+}
+
+/* Related demos */
+.content--related {
+	padding: 4em 1em;
+	text-align: center;
+	font-weight: bold;
+	background: #1c1c21;
+	color: #495050;
+}
+
+.content--related a:hover,
+.content--related a:focus {
+	color: #fff;
+}
+
+.media-item {
+	display: inline-block;
+	padding: 1em;
+	vertical-align: top;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.media-item__img {
+	max-width: 100%;
+	opacity: 0.3;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.media-item:hover .media-item__img,
+.media-item:focus .media-item__img {
+	opacity: 1;
+}
+
+.media-item__title {
+	margin: 0;
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+/* Sponsor */
+.pater {
+	display: none;
+	position: relative;
+	background: rgba(96,184,185,0.6);
+	padding: 2.5em 1em 2.5em;
+	width: 100%;
+	pointer-events: auto;
+}
+
+.pater:focus {
+	outline: none;
+}
+
+.pater::after {
+	content: 'Sponsored by';
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	color: #408283;
+	font-size: 0.65em;
+	font-weight: bold;
+}
+
+.pater__img {
+	max-width: 100%;
+}
+
+.pater__title {
+	font-size: 1em;
+	color: #fff;
+	margin: 0 0 0.25em 10px;
+}
+
+.pater__description {
+	color: #1a2638;
+	font-size: 0.85em;
+	font-weight: 600;
+	margin: 0 0 0 10px;
+}
+
+.pater__description strong {
+	color: #ffe38e;
+}
+
+.pater--responsive {
+	display: block;
+}
+
+@media screen and (min-width: 52.375em) {
+	.pater {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 0;	
+		width: 400px;
+		padding: 2.5em 1em 1em;
+		-webkit-transform: translate3d(0,3.5em,0);
+		transform: translate3d(0,3.5em,0);
+		-webkit-transition: background 0.3s, -webkit-transform 0.3s;
+		transition: background 0.3s, transform 0.3s;
+	}
+	.points-content--open ~ .pater {
+		pointer-events: none;
+		-webkit-transform: translate3d(0,100%,0);
+		transform: translate3d(0,100%,0);
+	}
+	.pater:focus,
+	.pater:hover {
+		background: rgba(96,184,185,1);
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+	.pater__img {
+		-webkit-transform-origin: 0% 50%;
+		transform-origin: 0% 50%;
+		-webkit-transform: scale(1.5);
+		transform: scale(1.5);
+		-webkit-transition: -webkit-transform 0.3s;
+		transition: transform 0.3s;
+	}
+	.pater:focus .pater__img,
+	.pater:hover .pater__img {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	.pater__description {
+		opacity: 0;
+		-webkit-transform: translate3d(0,1em,0);
+		transform: translate3d(0,1em,0);
+		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+		transition: opacity 0.3s, transform 0.3s;
+	}
+
+	.pater:focus .pater__description,
+	.pater:hover .pater__description {
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+		opacity: 1;
+	}
+	.pater--responsive {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 52.375em) {
+	.codrops-header {
+		padding: 0.25em;
+		font-size: 0.65em;
+	}
+	.codrops-header__tagline {
+		display: none;
+	}
+	.content {
+		font-size: 0.75em;
+	}
+	.message {
+		display: block;
+	}
+}
